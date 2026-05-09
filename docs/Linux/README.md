@@ -1,14 +1,18 @@
-# Linux Endpoint Monitoring
-This section documents the Linux/Ubuntu phase of the Wazuh SIEM/SOC lab.
+# Linux Endpoint Monitoring Overview
 
-The Linux phase focuses on endpoint data collection, creating alerts, malware detection, vulnerability management, and security configuration assessment.
+## Objective
 
-Current Linux work includes the following:
-- Wazuh agent monitoring
+This section documents the Linux/Ubuntu phase of my Wazuh SIEM/SOC lab.
+
+The goal is to monitor an Ubuntu endpoint using Wazuh and simulate realistic SOC workflows, including endpoint data collection, alert integration, and malware detection.
+
+## Implemented Capabilities
 - File Integrity Monitoring
-- VirusTotal integration
+- VirusTotal enrichment
 - Rootcheck testing
-- ClamAV integration
+- ClamAV malware detection
+- ClamAV on-access blocking/prevention
+- ClamAV log collection into Wazuh
 - Vulnerability Detection
-- Syscollector inventory
-- Security Configuration Assessment.
+- Syscollector inventory collection
+- Security Configuration Assessment
