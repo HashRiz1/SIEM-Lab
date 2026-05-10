@@ -28,7 +28,7 @@ The EICAR test file was used to safely validate malware detection.
 
 ClamAV detected the test file and Wazuh generated a malware detection alert.
 
-![ClamAV rule 52502 search result](image.png)
+![ClamAV rule 52502 search result](screenshots/image.png)
 
 Confirmed Wazuh alert:
 
