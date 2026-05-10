@@ -1,6 +1,8 @@
 # File Integrity Monitoring
 
-## Summary
+## Purpose
+
+The purpose of FIM is to monitor any file changes to a designated path, this is to ensure there is a log tracking any changes if I needed to investigate anything related to the filepath.
 
 For this part of the lab, I configured Wazuh's File Integrity Monitoring on the Ubuntu endpoint with the Wazuh manager.
 
@@ -10,6 +12,8 @@ File Integrity Monitoring is used to detect any creation, modification, or delet
 
 I tested FIM in various ways, including creating, deleting, and modifying files inside the endpoint. 
 These changes then create a syscheck event on Wazuh through the FIM Events category. 
+
+Below is an example of an event
 
 ![Event](screenshots/image.png)
 We can see that Wazuh generated a syscheck log that gives us the time, which agent was involved, the path, which in this case was for test.txt, and the event that occurred, which is `Integrity checksum changed`.
