@@ -1,11 +1,35 @@
 # FIM and VirusTotal Integration
 
-## Overview
+## Summary
 
-For this part of the lab, I used Wazuh's File Integrity Monitoring to detect file activity on the Ubuntu endpoint. I also configured VirusTotal so Wazuh could check a file's reputation, and when needed, file integrity events were generated.
+For this part of the lab, I configured Wazuh File Integrity Monitoring on the Ubuntu endpoint and integrated VirusTotal enrichment on the Wazuh manager.
 
-## Validation
+File Integrity Monitoring was used to detect any creation, modification, or deletion of files on the endpoint. VirusTotal added more context to file integrity events, helping show how endpoint data can be reviewed during SOC alerts.
 
-The EICAR test file was used as a safe test artifact.
+## What I Configured
 
-Wazuh detected the file activity through File Integrity Monitoring, and the VirusTotal integration generated an alert.
+- Wazuh File Integrity Monitoring for monitored endpoint paths
+- VirusTotal integration on the Wazuh manager
+- VirusTotal enrichment for syscheck events
+- Wazuh Dashboard searches for FIM and VirusTotal-related alerts
+
+## Configuration
+
+The VirusTotal integration was configured on the Wazuh manager in:
+
+```text
+/var/ossec/etc/ossec.conf
+
+<integration>
+  <name>virustotal</name>
+  <api_key>REDACTED</api_key>
+  <group>syscheck</group>
+  <alert_format>json</alert_format>
+</integration>
+```
+
+## Testing
+
+I tested FIM in various ways, including creating, deleting, and modifying files inside the endpoint. 
+These changes then create a syscheck event on Wazuh through the FIM Events category. 
+
