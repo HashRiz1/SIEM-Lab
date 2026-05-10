@@ -1,8 +1,5 @@
 # ClamAV Integration
 
-## Purpose
-
-The purpose of this section is to document how ClamAV was used as the malware detection tool and how it was integrated with Wazuh for a centralized SIEM alerting system.
 
 ## ClamAV Role
 
