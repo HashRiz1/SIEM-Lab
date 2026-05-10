@@ -33,3 +33,7 @@ The VirusTotal integration was configured on the Wazuh manager in:
 I tested FIM in various ways, including creating, deleting, and modifying files inside the endpoint. 
 These changes then create a syscheck event on Wazuh through the FIM Events category. 
 
+![Event](screenshots/image.png)
+We can see that Wazuh generated a log for test.txt being modified. We can further check the modifications by opening the document details log
+
+![Event](screenshots/1image.png)
