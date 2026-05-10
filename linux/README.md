@@ -16,3 +16,6 @@ The goal is to monitor an Ubuntu endpoint using Wazuh and simulate realistic SOC
 - Vulnerability Detection
 - Syscollector inventory collection
 - Security Configuration Assessment
+
+## Sections
+- [ClamAV Integration](clamav-integration/) - Local Linux malware detection, on-access prevention, and Wazuh alerting using ClamAV logs.
