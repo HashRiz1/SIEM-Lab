@@ -28,6 +28,8 @@ ClamAV detected the test file and Wazuh generated a malware detection alert.
 
 ![ClamAV rule 52502 search result](screenshots/image1.png)
 
+[Full expanded Wazuh alert](screenshots/clamav-rule-52502-expanded-alert.png)
+
 Confirmed Wazuh alert:
 
 - Rule ID: `52502`
