@@ -16,11 +16,9 @@ ClamAV has many configurations, the following is what I've incorporated:
 
 ## Wazuh Log Collection
 
-The Linux Wazuh agent was configured to collect ClamAV logs from:
+The Linux Wazuh agent was configured to collect ClamAV logs from: `/var/log/clamav/clamav.log`
 
-`/var/log/clamav/clamav.log`
-
-This allowed Wazuh to ingest ClamAV log entries and generate alerts when malware detections occurred.
+This allows Wazuh to collect the ClamAV log entries and generate alerts when malware detections occur
 
 ## Detection
 
