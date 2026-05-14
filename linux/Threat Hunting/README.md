@@ -6,7 +6,7 @@ Threat Hunting is used to search for and investigate any security events from th
 
 This focuses on specifics, such as alerts and documented investigation notes, that may be useful in the future for other investigations.
 
-**Below are examples of what Threat hunting searches for**
+**Threat hunting examples**
 
 - Malware detection alerts from ClamAV
 - File activity events from Wazuh File Integrity Monitoring
