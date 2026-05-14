@@ -42,7 +42,7 @@ In order to remediate the problem, I first moved unconfined profiles into compla
 
 After moving the AppArmor profiles into complain mode, I restarted the Wazuh agent and allowed SCA to rescan the endpoint.
 
-Wazuh then generated a new SCA event showing that the AppArmor benchmark check changed from `failed` to `passed`.
+Wazuh then generated a new SCA event showing that the AppArmor benchmark check changed from "failed" to "passed".
 
 ![image](screenshots/3content.png)
 
