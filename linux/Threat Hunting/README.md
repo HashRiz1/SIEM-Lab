@@ -27,6 +27,23 @@ I reviewed the event details in Wazuh and determined that the event showed that 
 
 After identifying the event in Wazuh, I validated the AppArmor state directly on the Ubuntu endpoint.
 
-I reviewed the AppArmor profile with ``sudo aa-status`` which I got 
+I reviewed the AppArmor profile with ``sudo aa-status``:
 
-![image](screenshots/imag
+![image](screenshots/1image.png)
+
+As you can see from the image above, the output showed that AppArmor was loaded, but there were 92 profiles in unconfined mode. 
+This was why the alert was generated in Wazuh.
+
+**Remediation**
+
+In order to remediate the problem, I first moved unconfined profiles into complain mode as a safe step, so it will still log violations rather than nothing, which is what unconfined profiles do. I then reviewed whether specific profiles could be placed into enforce mode without disrupting the agent.
+
+### Remediation Verification
+
+After moving the AppArmor profiles into complain mode, I restarted the Wazuh agent and allowed SCA to rescan the endpoint.
+
+Wazuh then generated a new SCA event showing that the AppArmor benchmark check changed from `failed` to `passed`.
+
+![image](screenshots/3content.png)
+
+This confirmed that the fix was successful and that all the AppArmor profiles were now in an accepted state for the CIS check.
